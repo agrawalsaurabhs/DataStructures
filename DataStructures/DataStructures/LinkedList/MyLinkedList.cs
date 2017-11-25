@@ -111,6 +111,36 @@ namespace DataStructures.LinkedList
 
         }
 
+        public void LengthLinkedListIterative()
+        {
+            int length = 0;
+            Node curr = Head;
+            while (curr!=null)
+            {
+                length++;
+                curr = curr.Next;
+            }
+            Console.WriteLine($"The lenght of linked list is {length}");
+        }
+
+        public void LengthLinkedListRecursive()
+        {
+            var length = this.LengthLinkedListRecursive(Head);
+            Console.WriteLine($"The lenght of linked list is {length}");
+        }
+
+        private int LengthLinkedListRecursive(Node head)
+        {
+            if (head == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1 + LengthLinkedListRecursive(head.Next);
+            }
+        }
+
 
 
     }

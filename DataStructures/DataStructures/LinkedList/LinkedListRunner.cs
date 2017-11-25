@@ -18,7 +18,8 @@ namespace DataStructures.LinkedList
             myLinkedList.Add(20);
             myLinkedList.Add(30);
             myLinkedList.Print();
-
+            myLinkedList.LengthLinkedListIterative();
+            myLinkedList.LengthLinkedListRecursive();
             Console.WriteLine("Delete node at a given position");
             myLinkedList.DeleteNodeAtGivenPosition(0);
             myLinkedList.Print();
@@ -41,6 +42,8 @@ namespace DataStructures.LinkedList
             myLinkedList.Print();
             myLinkedList.Remove(30);
             myLinkedList.Print();
+            myLinkedList.LengthLinkedListIterative();
+            myLinkedList.LengthLinkedListRecursive();
         }
     }
 }
