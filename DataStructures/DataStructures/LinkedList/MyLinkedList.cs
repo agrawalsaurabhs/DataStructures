@@ -41,15 +41,6 @@ namespace DataStructures.LinkedList
                 Console.WriteLine("empty");
                 return;
             }
-            if (Head.Next == null)
-            {
-                if (data == Head.Data)
-                {
-                    Head = null;
-                }
-                return;
-            }
-
             if (Head.Data == data)
             {
                 Head = Head.Next;
@@ -83,6 +74,44 @@ namespace DataStructures.LinkedList
             Console.Write("END");
         }
 
-        
+        public void DeleteNodeAtGivenPosition(int pos)
+        {
+            if (Head == null)
+            {
+                Console.WriteLine("Empty");
+                return;
+            }
+
+            if (pos == 0)
+            {
+                Head = Head.Next;
+                return;
+            }
+
+            Node prev = Head;
+            Node curr = Head.Next;
+            int count = 1;
+            while (curr != null && count < pos)
+            {
+                count++;
+                prev = curr;
+                curr = curr.Next;
+            }
+
+            if (curr != null)
+            {
+                prev.Next = curr.Next;
+                return;
+            }
+
+            if (pos>count)
+            {
+                Console.WriteLine("Index out of bound");
+            }
+
+        }
+
+
+
     }
 }

@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LinkedList\DeleteNodeAtGivenPosition.cs" />
     <Compile Include="LinkedList\LinkedListRunner.cs" />
     <Compile Include="LinkedList\MyLinkedList.cs" />
     <Compile Include="Program.cs" />
