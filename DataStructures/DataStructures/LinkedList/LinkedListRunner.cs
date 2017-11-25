@@ -18,6 +18,11 @@ namespace DataStructures.LinkedList
             myLinkedList.Add(20);
             myLinkedList.Add(30);
             myLinkedList.Print();
+
+            myLinkedList.SearchElementRecursive(100);
+            myLinkedList.SearchElementRecursive(10);
+            myLinkedList.SearchElementRecursive(30);
+
             myLinkedList.LengthLinkedListIterative();
             myLinkedList.LengthLinkedListRecursive();
             Console.WriteLine("Delete node at a given position");

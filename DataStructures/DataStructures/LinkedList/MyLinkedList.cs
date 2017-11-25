@@ -125,11 +125,11 @@ namespace DataStructures.LinkedList
 
         public void LengthLinkedListRecursive()
         {
-            var length = this.LengthLinkedListRecursive(Head);
+            var length = this.LengthLinkedListRecursivePrivate(Head);
             Console.WriteLine($"The lenght of linked list is {length}");
         }
 
-        private int LengthLinkedListRecursive(Node head)
+        private int LengthLinkedListRecursivePrivate(Node head)
         {
             if (head == null)
             {
@@ -137,11 +137,27 @@ namespace DataStructures.LinkedList
             }
             else
             {
-                return 1 + LengthLinkedListRecursive(head.Next);
+                return 1 + LengthLinkedListRecursivePrivate(head.Next);
             }
         }
 
+        public void SearchElementRecursive(int data)
+        {
+            var exists = SearchElementRecursivePrivate(Head, data);
+            Console.WriteLine(exists ? "Exists" : "Do Not exist");
+        }
 
-
+        private bool SearchElementRecursivePrivate(Node head, int data)
+        {
+            if (head == null)
+            {
+                return false;
+            }
+            if (head.Data == data)
+            {
+                return true;
+            }
+            return SearchElementRecursivePrivate(head.Next, data);
+        }
     }
 }
