@@ -19,15 +19,20 @@ namespace DataStructures.LinkedList
             myLinkedList1.Add(10);
 
             MyLinkedList myLinkedList2 = new MyLinkedList();
-            myLinkedList2.Add(2);
+            myLinkedList2.Add(1);
+            myLinkedList2.Add(3);
             myLinkedList2.Add(4);
             myLinkedList2.Add(6);
             myLinkedList2.Add(8);
+            myLinkedList2.Add(10);
 
-            MyLinkedList intersected = new MyLinkedList();
-            intersected.Head = new Node() { };
-            intersected.Head =IntersectLinkedList.IntersectLinkedListUsingRecursion(myLinkedList1.Head, myLinkedList2.Head);
-            intersected.Print();
+            Console.WriteLine(IdentialLinkedList.IsIdentical(myLinkedList1.Head, myLinkedList2.Head) ? "Yes" : "No");
+            
+
+            //MyLinkedList intersected = new MyLinkedList();
+            //intersected.Head = new Node() { };
+            //intersected.Head =IntersectLinkedList.IntersectLinkedListUsingRecursion(myLinkedList1.Head, myLinkedList2.Head);
+            //intersected.Print();
 
             //MyLinkedList mergeList = new MyLinkedList();
             //mergeList.Head = new Node() {};
