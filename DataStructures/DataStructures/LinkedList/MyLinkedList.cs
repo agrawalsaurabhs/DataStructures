@@ -159,5 +159,28 @@ namespace DataStructures.LinkedList
             }
             return SearchElementRecursivePrivate(head.Next, data);
         }
-    }
+
+        public  void Reverse()
+        {
+            if (Head == null)
+            {
+                Console.WriteLine("Empty");
+            }
+            var ptr= ReversePrivate(Head);
+            ptr.Next = null;
+        }
+
+        private Node ReversePrivate(Node head)
+        {
+            
+            if (head.Next == null)
+            {
+                Head = head;
+                return head;
+            }
+            var ptr = ReversePrivate(head.Next);
+            ptr.Next = head;
+            return head;
+        }
+}
 }
