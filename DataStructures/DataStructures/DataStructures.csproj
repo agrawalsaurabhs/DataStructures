@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LinkedList\LinkedListRunner.cs" />
+    <Compile Include="LinkedList\MergeLinkedList.cs" />
     <Compile Include="LinkedList\MyLinkedList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

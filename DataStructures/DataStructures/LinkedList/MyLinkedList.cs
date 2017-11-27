@@ -14,7 +14,7 @@ namespace DataStructures.LinkedList
 
     class MyLinkedList
     {
-        private Node Head;
+        public Node Head;
         public void Add(int data)
         {
             if (Head == null)
@@ -182,5 +182,11 @@ namespace DataStructures.LinkedList
             ptr.Next = head;
             return head;
         }
+
+        public void MergeLinkedListUsingRecursion()
+        {
+            
+        }
+
 }
 }
