@@ -11,19 +11,28 @@ namespace DataStructures.LinkedList
         public static void Run()
         {
             MyLinkedList myLinkedList1 = new MyLinkedList();
-            myLinkedList1.Add(2);
+            myLinkedList1.Add(1);
+            myLinkedList1.Add(3);
+            myLinkedList1.Add(4);
+            myLinkedList1.Add(6);
+            myLinkedList1.Add(8);
             myLinkedList1.Add(10);
-            myLinkedList1.Add(15);
 
             MyLinkedList myLinkedList2 = new MyLinkedList();
-            myLinkedList2.Add(5);
+            myLinkedList2.Add(2);
             myLinkedList2.Add(4);
             myLinkedList2.Add(6);
-       
-            MyLinkedList mergeList = new MyLinkedList();
-            mergeList.Head = new Node() {};
-            mergeList.Head = MergeLinkedList.MergeLinkedListUsingRecursion(myLinkedList1.Head, myLinkedList2.Head.Next);
-            mergeList.Print();
+            myLinkedList2.Add(8);
+
+            MyLinkedList intersected = new MyLinkedList();
+            intersected.Head = new Node() { };
+            intersected.Head =IntersectLinkedList.IntersectLinkedListUsingRecursion(myLinkedList1.Head, myLinkedList2.Head);
+            intersected.Print();
+
+            //MyLinkedList mergeList = new MyLinkedList();
+            //mergeList.Head = new Node() {};
+            //mergeList.Head = MergeLinkedList.MergeLinkedListUsingRecursion(myLinkedList1.Head, myLinkedList2.Head.Next);
+            //mergeList.Print();
 
 
 

@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LinkedList\IntersectLinkedList.cs" />
     <Compile Include="LinkedList\LinkedListRunner.cs" />
     <Compile Include="LinkedList\MergeLinkedList.cs" />
     <Compile Include="LinkedList\MyLinkedList.cs" />
